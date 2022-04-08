@@ -3,7 +3,7 @@
     <treeselect
       :multiple="true"
       :options="options"
-      placeholder="Select your favourite(s)..."
+      placeholder="Select  favourite(s)..."
       v-model="value"
       />
     <treeselect-value :value="value" />
@@ -17,6 +17,7 @@
       options: [ {
         id: 'fruits',
         label: 'Fruits',
+        hideCheckBox: true,
         children: [ {
           id: 'apple',
           label: 'Apple 🍎',
@@ -37,6 +38,7 @@
       }, {
         id: 'vegetables',
         label: 'Vegetables',
+        hideCheckBox: true,
         children: [ {
           id: 'corn',
           label: 'Corn 🌽',
