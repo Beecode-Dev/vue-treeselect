@@ -121,6 +121,7 @@
         const { instance, node } = this
 
         if (instance.single) return null
+        if (node.hideCheckBox) return null
         if (instance.disableBranchNodes && node.isBranch) return null
 
         return (
@@ -255,7 +256,7 @@
       handleMouseDownOnLabelContainer: onLeftClick(function handleMouseDownOnLabelContainer() {
         const { instance, node } = this
 
-        if (node.isBranch && instance.disableBranchNodes) {
+        if (node.isBranch && instance.disableBranchNodes || node.hideCheckbox) {
           instance.toggleExpanded(node)
         } else {
           instance.select(node)
